@@ -12,21 +12,20 @@ const education = [
     coursework: ["Data Structures", "Database Management Systems", "Data Mining", "Machine Learning"],
     gradient: "from-red-600 to-gray-600 dark:from-red-400 dark:to-gray-400",
     hoverColor: "group-hover:text-red-600 dark:group-hover:text-red-400",
-    logoSrc: "https://www.stonybrook.edu/brand/img/logos/mark/sbu-logo-vertical-500.png",
+    logoSrc: "/SBU.jpg",
     logoAlt: "Stony Brook University Logo"
   },
   {
     degree: "Bachelor of Technology in Artificial Intelligence & Data Science",
     institution: "Thakur College of Engineering and Technology",
-    universitySystem: "University of Mumbai",
     location: "Mumbai, India",
     duration: "December 2020 – June 2024",
     status: "Completed",
     coursework: ["Data Structures", "Database Management Systems", "Data Mining", "Machine Learning"],
     gradient: "from-blue-600 to-indigo-600 dark:from-blue-400 dark:to-indigo-400",
     hoverColor: "group-hover:text-blue-600 dark:group-hover:text-blue-400",
-    logoSrc: "https://upload.wikimedia.org/wikipedia/en/thumb/c/c4/University_of_Mumbai_Logo.svg/1200px-University_of_Mumbai_Logo.svg.png",
-    logoAlt: "University of Mumbai Logo"
+    logoSrc: "/tcet.webp",
+    logoAlt: "TCET Logo"
   }
 ];
 
@@ -86,11 +85,6 @@ export function EducationSection() {
                     <BookOpen className="h-4 w-4 flex-shrink-0" />
                     <span className="font-medium text-sm">{edu.institution}</span>
                   </div>
-                  {edu.universitySystem && (
-                    <div className="text-sm text-muted-foreground ml-6">
-                      {edu.universitySystem}
-                    </div>
-                  )}
                   <div className="flex items-center gap-2 text-sm text-muted-foreground">
                     <MapPin className="h-4 w-4 flex-shrink-0" />
                     <span>{edu.location}</span>
