@@ -128,7 +128,7 @@ export function SkillsShowcase() {
   const [activeCategory, setActiveCategory] = useState(0);
 
   return (
-    <section className="py-20 bg-gradient-to-br from-muted/30 via-background to-muted/30 dark:from-muted/20 dark:via-background dark:to-muted/20 relative overflow-hidden">
+    <section id="tech-stack" className="py-20 bg-gradient-to-br from-muted/30 via-background to-muted/30 dark:from-muted/20 dark:via-background dark:to-muted/20 relative overflow-hidden">
       {/* Background decorative elements */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_50%,rgba(120,119,198,0.05),transparent_50%)] dark:bg-[radial-gradient(circle_at_20%_50%,rgba(147,197,253,0.08),transparent_50%)] pointer-events-none -z-10" />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(34,197,94,0.05),transparent_50%)] dark:bg-[radial-gradient(circle_at_80%_20%,rgba(168,85,247,0.08),transparent_50%)] pointer-events-none -z-10" />
