@@ -7,7 +7,7 @@ import { Moon, Sun, Menu, X } from "lucide-react";
 const navItems = [
   { name: "Home", href: "#home" },
   { name: "About", href: "#about" },
-  { name: "Tech Stack", href: "#tech-stack" },
+  { name: "Tech Stack", href: "#about" },
   { name: "Projects", href: "#projects" },
   { name: "Contact", href: "#contact" },
 ];
