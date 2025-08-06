@@ -21,7 +21,7 @@ const education = [
     location: "Mumbai, India",
     duration: "December 2020 – June 2024",
     status: "Completed",
-    coursework: ["Data Structures", "Database Management Systems", "Data Mining", "Machine Learning"],
+    coursework: ["Data Structures", "Database Management Systems", "Data Mining", "Machine Learning", "Operating Systems", "Natural Language Processing", "Artificial Intelligence", "Design and Analysis of Algorithms"],
     gradient: "from-blue-600 to-indigo-600 dark:from-blue-400 dark:to-indigo-400",
     hoverColor: "group-hover:text-blue-600 dark:group-hover:text-blue-400",
     logoSrc: "/tcet.webp",
@@ -56,9 +56,9 @@ export function EducationSection() {
                 animationFillMode: 'forwards'
               }}
             >
-              <CardHeader className="pb-4">
-                <div className="flex items-center gap-4 mb-4">
-                  <div className="flex-shrink-0 w-14 h-14 bg-background border border-border rounded-lg p-2 group-hover:scale-105 transition-transform duration-300 shadow-md">
+              <CardHeader className="pb-6">
+                <div className="flex items-start justify-between mb-6">
+                  <div className="flex-shrink-0 w-20 h-20 bg-white dark:bg-gray-100 border-2 border-border/30 rounded-xl p-3 group-hover:scale-105 transition-transform duration-300 shadow-lg hover:shadow-xl">
                     <img 
                       src={edu.logoSrc}
                       alt={edu.logoAlt}
@@ -70,38 +70,38 @@ export function EducationSection() {
                   </div>
                   <Badge 
                     variant={edu.status === "In Progress" ? "default" : "secondary"}
-                    className={`${edu.status === "In Progress" ? "bg-primary/20 text-primary border-primary/40 dark:bg-teal-400/20 dark:text-teal-400 dark:border-teal-400/40" : ""} ml-auto`}
+                    className={`${edu.status === "In Progress" ? "bg-primary/20 text-primary border-primary/40 dark:bg-teal-400/20 dark:text-teal-400 dark:border-teal-400/40" : ""}`}
                   >
                     {edu.status}
                   </Badge>
                 </div>
                 
-                <CardTitle className={`text-xl font-bold transition-colors ${edu.hoverColor} mb-2`}>
+                <CardTitle className={`text-xl font-bold transition-colors ${edu.hoverColor} mb-4 leading-tight`}>
                   {edu.degree}
                 </CardTitle>
                 
-                <div className="space-y-2">
-                  <div className="flex items-center gap-2 text-muted-foreground">
+                <div className="space-y-3">
+                  <div className="flex items-center gap-3 text-muted-foreground">
                     <BookOpen className="h-4 w-4 flex-shrink-0" />
                     <span className="font-medium text-sm">{edu.institution}</span>
                   </div>
-                  <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                  <div className="flex items-center gap-3 text-sm text-muted-foreground">
                     <MapPin className="h-4 w-4 flex-shrink-0" />
                     <span>{edu.location}</span>
                   </div>
-                  <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                  <div className="flex items-center gap-3 text-sm text-muted-foreground">
                     <Calendar className="h-4 w-4 flex-shrink-0" />
                     <span>{edu.duration}</span>
                   </div>
                 </div>
               </CardHeader>
               
-              <CardContent>
+              <CardContent className="pt-0">
                 <div>
-                  <h4 className="font-semibold mb-3 text-sm text-muted-foreground">Relevant Coursework</h4>
-                  <div className="flex flex-wrap gap-2">
+                  <h4 className="font-semibold mb-4 text-sm text-muted-foreground uppercase tracking-wide">Relevant Coursework</h4>
+                  <div className="grid grid-cols-2 gap-2">
                     {edu.coursework.map((course) => (
-                      <Badge key={course} variant="outline" className="text-xs">
+                      <Badge key={course} variant="outline" className="text-xs justify-center py-1 hover:bg-primary/10 hover:border-primary/30 transition-colors">
                         {course}
                       </Badge>
                     ))}
