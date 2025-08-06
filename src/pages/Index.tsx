@@ -4,6 +4,7 @@ import { ThemeProvider } from "@/components/ThemeProvider";
 import { Navigation } from "@/components/Navigation";
 import { HeroSection } from "@/components/HeroSection";
 import { AboutSection } from "@/components/AboutSection";
+import { EducationSection } from "@/components/EducationSection";
 import { AchievementsSection } from "@/components/AchievementsSection";
 import { ExperienceSection } from "@/components/ExperienceSection";
 import { SkillsShowcase } from "@/components/SkillsShowcase";
@@ -34,6 +35,7 @@ const Index = () => {
         <main>
           <HeroSection />
           <AboutSection />
+          <EducationSection />
           <AchievementsSection />
           <ExperienceSection />
           <SkillsShowcase />
