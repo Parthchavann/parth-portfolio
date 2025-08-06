@@ -80,18 +80,18 @@ export function AboutSection() {
             </div>
           </div>
 
-          {/* What Drives Me Card - Full width rectangular below */}
+          {/* Current Focus Card - Full width rectangular below */}
           <Card className="bg-background/50 backdrop-blur-sm border-teal-500/20">
             <CardContent className="px-6 py-6 sm:px-8 sm:py-7">
-              <h3 className="text-2xl font-semibold mb-4 text-teal-500 text-center">What Drives Me</h3>
+              <h3 className="text-2xl font-semibold mb-4 text-teal-500 text-center">Current Focus</h3>
               <div className="space-y-4">
                 <p className="text-muted-foreground leading-relaxed text-lg">
-                  Every line of code is an opportunity to solve real problems. Whether it's optimizing 
-                  data pipelines, fine-tuning LLMs, or building intuitive user experiences, I focus on 
-                  creating solutions that matter to people and businesses.
+                  Currently pursuing MS Data Science at Stony Brook University while serving as AI Software Engineer Intern at Hausvac. 
+                  Building production-grade AI systems that automate complex business processes and deliver measurable impact. 
+                  Passionate about transforming enterprises through intelligent automation and scalable ML architectures.
                 </p>
                 <blockquote className="text-xl italic text-center text-muted-foreground pt-2">
-                  "Data-driven dreams, engineered with empathy."
+                  "Engineering intelligent solutions for tomorrow's challenges."
                 </blockquote>
               </div>
             </CardContent>
