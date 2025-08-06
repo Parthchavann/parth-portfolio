@@ -21,7 +21,7 @@ const education = [
     location: "Mumbai, India",
     duration: "December 2020 – June 2024",
     status: "Completed",
-    coursework: ["Data Structures", "Database Management Systems", "Data Mining", "Machine Learning", "Operating Systems", "Natural Language Processing", "Artificial Intelligence", "Design and Analysis of Algorithms"],
+    coursework: ["Operating Systems", "Natural Language Processing", "Artificial Intelligence", "Design and Analysis of Algorithms"],
     gradient: "from-blue-600 to-indigo-600 dark:from-blue-400 dark:to-indigo-400",
     hoverColor: "group-hover:text-blue-600 dark:group-hover:text-blue-400",
     logoSrc: "/tcet.webp",
