@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { ExternalLink, Github } from "lucide-react";
+import { Github } from "lucide-react";
 
 const projects = [
   {
@@ -15,7 +15,7 @@ const projects = [
     hoverColor: "group-hover:text-violet-600 dark:group-hover:text-violet-400",
     challenges: "Reduced traffic prediction error by 40% (4.8→2.9 mph MAE) achieving 91.5% accuracy by implementing dual LSTM-GNN architecture with 24-hour sequences and 3-layer attention networks trained on multi-city Uber Movement data",
     learnings: "Built production ML pipeline with 89% R² score and 4-worker API deployment using Apache Spark (4GB memory), FastAPI service, and Airflow DAGs with 6-hour automated retraining cycles. Delivered full-stack traffic platform with React TypeScript dashboard featuring real-time Leaflet/KeplerGL visualizations, batch prediction endpoints, and dynamic model switching between LSTM/GNN architectures",
-    github: "https://github.com/Parthchavann",
+    github: "https://github.com/Parthchavann/uber-movement-prediction",
     demo: "#"
   },
   {
@@ -27,7 +27,7 @@ const projects = [
     hoverColor: "group-hover:text-violet-600 dark:group-hover:text-violet-400",
     challenges: "Designed real-time disaster response architecture with 4 multimodal Kafka streams and event-driven processing by implementing Spark Streaming, Kubernetes deployment, and 7-category classification system. Built multimodal ML pipeline with 768-dim DistilBERT and 2048-dim ResNet-50 processing 15+ engineered features via 4-modal attention fusion",
     learnings: "Trained 3 models on 7,000 samples with sub-second inference achieving multimodal fusion of text, image, and sensor data. Developed production-ready API with geospatial search featuring 8 REST endpoints, WebSocket alerts, and 50km radius vector similarity by integrating FastAPI, Redis caching, and Qdrant vector database",
-    github: "https://github.com/Parthchavann",
+    github: "https://github.com/Parthchavann/disaster-response-system",
     demo: "#"
   },
   {
@@ -37,9 +37,9 @@ const projects = [
     tags: ["React", "Next.js", "Convex", "TypeScript", "Claude Opus", "OpenAI o3", "CRM"],
     category: "Full-Stack",
     hoverColor: "group-hover:text-emerald-600 dark:group-hover:text-teal-400",
-    challenges: "Architected modular components enabling real-time quoting, smart scheduling, and automated invoicing with 70% reduction in manual quoting time",
-    learnings: "Advanced LLM integration patterns, agentic automation workflows, and human-in-the-loop quality control systems",
-    github: "https://github.com/Parthchavann",
+    challenges: "Built cloud-native CRM with AI-powered service quote generation using Groq/TogetherAI APIs, implementing real-time data synchronization via Supabase PostgreSQL and serverless edge functions for scalable field service operations. Replaced traditional manual quoting processes with AI automation achieving 70% reduction in manual quoting time through intelligent LLM integration.",
+    learnings: "Mastered modern React patterns with Next.js App Router and TypeScript (97.7% codebase), cloud-native architecture design with Supabase backend, and advanced LLM integration patterns for business workflow automation. Developed expertise in agentic automation workflows and human-in-the-loop quality control systems.",
+    github: "https://github.com/Parthchavann/HausVac-FSM-Platform",
     demo: "#"
   },
   {
@@ -49,9 +49,9 @@ const projects = [
     tags: ["Python", "PyMuPDF", "OpenAI GPT", "Supabase", "Airtable", "Docker", "Airflow"],
     category: "Full-Stack",
     hoverColor: "group-hover:text-emerald-600 dark:group-hover:text-teal-400",
-    challenges: "Built intelligent resume parsing and job matching with 85% engagement boost using TF-IDF and cosine similarity algorithms",
-    learnings: "Document processing pipelines, real-time salary insights integration, and scalable backend orchestration",
-    github: "https://github.com/Parthchavann",
+    challenges: "Developed comprehensive career assessment algorithm processing 57 questions mapped to 8 personality archetypes, implemented resume-job matching using TfidfVectorizer and cosine similarity achieving 85% engagement boost. Built microservices architecture with FastAPI supporting automated career path recommendations, document text extraction via PyMuPDF, and AI-powered cover letter generation using OpenAI GPT models.",
+    learnings: "Advanced text similarity algorithms for job matching, seamless integration of multiple AI services (OpenAI API, Piloterr Glassdoor API) in cohesive workflows, and microservices design patterns for career assessment platforms. Mastered document processing pipelines and personalized content generation using AI.",
+    github: "https://github.com/Parthchavann/career-portal-backend",
     demo: "#"
   },
   {
@@ -61,9 +61,9 @@ const projects = [
     tags: ["R", "XGBoost", "tidyverse", "ggplot2", "K-Means", "caret", "factoextra"],
     category: "Data Science",
     hoverColor: "group-hover:text-blue-600 dark:group-hover:text-cyan-400",
-    challenges: "Developed predictive models achieving 20% RMSE improvement over baseline, enabling strategic race simulations and pit stop optimizations",
-    learnings: "Time series forecasting, clustering algorithms for driver profiling, and statistical hypothesis testing for racing strategies",
-    github: "https://github.com/Parthchavann",
+    challenges: "Built comprehensive F1 analytics pipeline with XGBoost regression models and K-means clustering (k=5) for driver performance profiling. Implemented multi-dataset merging (lap times, results, drivers, constructors) with advanced feature engineering including driver age, race context, and pit stop data. Achieved quantifiable insights: top 5 grid starters show 22x higher win likelihood (17.5% vs 0.47%) through statistical analysis using Chi-square tests and Cramér's V.",
+    learnings: "Advanced statistical modeling for sports analytics using R with dplyr, tidyr, caret, and xgboost libraries. Mastered cluster analysis validation techniques (elbow method, silhouette scores), reproducible research practices with R Markdown, and time series forecasting for strategic race simulations and pit stop optimizations.",
+    github: "https://github.com/Parthchavann/F1-Race-Analytics",
     demo: "#"
   },
   {
@@ -73,9 +73,9 @@ const projects = [
     tags: ["Python", "scikit-learn", "XGBoost", "Sweetviz", "Faker", "RMSE", "Pandas"],
     category: "Data Science",
     hoverColor: "group-hover:text-blue-600 dark:group-hover:text-cyan-400",
-    challenges: "Improved enrollment forecasting accuracy by 15% using Random Forest & XGBoost with data-driven planning for 50+ academic courses",
-    learnings: "Ensemble modeling techniques, synthetic data generation strategies, and automated EDA for feature discovery",
-    github: "https://github.com/Parthchavann",
+    challenges: "Designed comprehensive enrollment prediction system comparing Random Forest vs XGBoost regressors with 100 estimators each (max depth 10). Implemented synthetic data generation using Faker library for robust model training, achieving 15% accuracy improvement for resource allocation optimization across 50+ academic courses. Built automated EDA pipeline using sweetviz with one-hot encoding and categorical-to-numerical mapping for feature engineering.",
+    learnings: "Ensemble method comparison and selection methodologies, sophisticated synthetic data generation techniques for educational datasets, and automated exploratory data analysis for feature discovery. Mastered performance metrics evaluation (MAE, MSE, RMSE) and educational data modeling approaches for institutional planning.",
+    github: "https://github.com/Parthchavann/AI-Driven-Enrollment-Forecasting-System",
     demo: "#"
   },
   {
@@ -85,9 +85,9 @@ const projects = [
     tags: ["Python", "Pandas", "NumPy", "Matplotlib", "Seaborn", "Geospatial Analysis"],
     category: "Data Science",
     hoverColor: "group-hover:text-blue-600 dark:group-hover:text-cyan-400",
-    challenges: "Analyzed 768K unemployment records across 28 Indian states, identifying 5% participation drop and regional resilience patterns",
-    learnings: "Large-scale data processing, geospatial analysis techniques, and temporal pattern recognition for policy insights",
-    github: "https://github.com/Parthchavann",
+    challenges: "Processed and analyzed 768K unemployment records from 28 Indian states comparing pre-pandemic (2019) vs pandemic (2020) workforce data. Implemented comprehensive data cleaning pipeline handling null values and temporal analysis revealing 0.45% average unemployment increase (11.79% to 12.24%) during COVID-19. Built statistical comparison methodology quantifying pandemic impact on regional labor markets with unemployment ranges from 0-76.74% across states.",
+    learnings: "Large-scale temporal data analysis for socioeconomic policy impact assessment, advanced data preprocessing techniques for workforce analytics, and statistical comparison methodologies for government data. Mastered data visualization using Matplotlib/Seaborn for policy insights and temporal pattern recognition for economic resilience analysis.",
+    github: "https://github.com/Parthchavann/OIBSIP_Task1",
     demo: "#"
   },
   {
@@ -278,16 +278,6 @@ export function ProjectsSection() {
                   >
                     <Github className="h-4 w-4" />
                     <span>View Code</span>
-                  </Button>
-                  <Button 
-                    variant="outline" 
-                    className="flex items-center space-x-2"
-                    onClick={() => {
-                      if (selectedProject.demo !== "#") window.open(selectedProject.demo, '_blank');
-                    }}
-                  >
-                    <ExternalLink className="h-4 w-4" />
-                    <span>Live Demo</span>
                   </Button>
                 </div>
               </CardContent>

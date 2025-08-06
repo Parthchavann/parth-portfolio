@@ -65,80 +65,89 @@ export function HeroSection() {
         ))}
       </div>
 
-      <div className="container mx-auto px-4 text-center z-10 relative">
-        <div className="max-w-6xl mx-auto space-y-2 md:space-y-12 animate-fade-in">
-          {/* Header Section */}
-          <div className="space-y-1 md:space-y-8">
-            <h1 className="text-3xl sm:text-4xl md:text-8xl lg:text-9xl font-bold bg-gradient-to-r from-gray-900 via-primary to-teal-600 dark:from-white dark:via-teal-400 dark:to-purple-400 bg-clip-text text-transparent drop-shadow-sm animate-gradient-shift leading-[1.1] tracking-tight">
-              Parth Chavan
-            </h1>
-            
-            <div className="h-8 md:h-24 flex items-center justify-center">
-              <p className="text-sm sm:text-base md:text-4xl lg:text-5xl">
-                <span className="text-gray-800 dark:text-gray-100 font-bold bg-gradient-to-r from-primary to-teal-600 dark:from-teal-400 dark:to-purple-400 bg-clip-text text-transparent">
-                  {isTyping ? roles[currentRole] : ""}
-                </span>
-                <span className="animate-pulse text-primary dark:text-teal-400 text-lg sm:text-xl md:text-5xl ml-1">|</span>
+      <div className="container mx-auto px-4 z-10 relative">
+        <div className="max-w-6xl mx-auto animate-fade-in space-y-8 md:space-y-12">
+          
+          {/* Text Content First */}
+          <div className="text-center space-y-2 md:space-y-8">
+            {/* Header Section */}
+            <div className="space-y-1 md:space-y-6">
+              <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-8xl font-bold bg-gradient-to-r from-gray-900 via-primary to-teal-600 dark:from-white dark:via-teal-400 dark:to-purple-400 bg-clip-text text-transparent drop-shadow-sm animate-gradient-shift leading-[1.1] tracking-tight">
+                Parth Chavan
+              </h1>
+              
+              <div className="h-8 md:h-20 flex items-center justify-center">
+                <p className="text-base sm:text-lg md:text-4xl lg:text-5xl">
+                  <span className="text-gray-800 dark:text-gray-100 font-bold bg-gradient-to-r from-primary to-teal-600 dark:from-teal-400 dark:to-purple-400 bg-clip-text text-transparent">
+                    {isTyping ? roles[currentRole] : ""}
+                  </span>
+                  <span className="animate-pulse text-primary dark:text-teal-400 text-xl sm:text-2xl md:text-5xl ml-1">|</span>
+                </p>
+              </div>
+            </div>
+
+            {/* Description Section */}
+            <div className="max-w-5xl mx-auto space-y-1 md:space-y-4">
+              <p className="text-base sm:text-lg md:text-2xl lg:text-3xl text-gray-700 dark:text-gray-200 leading-tight md:leading-relaxed font-light">
+                Transforming Data into <span className="text-primary dark:text-teal-400 font-bold bg-primary/20 dark:bg-teal-400/30 px-2 py-1 md:px-3 md:py-2 rounded-xl shadow-lg">Intelligent Solutions</span> Through Advanced Analytics.
+              </p>
+              <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-700 dark:text-gray-200 font-medium leading-tight md:leading-relaxed">
+                Data Scientist & ML Engineer specializing in <span className="text-primary dark:text-teal-400 font-bold">predictive modeling</span> and <span className="text-primary dark:text-teal-400 font-bold">real-time analytics</span> for data-driven insights.
               </p>
             </div>
           </div>
 
-          {/* Description Section */}
-          <div className="max-w-5xl mx-auto space-y-1 md:space-y-4">
-            <p className="text-sm sm:text-base md:text-2xl lg:text-3xl text-gray-700 dark:text-gray-200 leading-tight md:leading-relaxed font-light">
-              Transforming Data into <span className="text-primary dark:text-teal-400 font-bold bg-primary/20 dark:bg-teal-400/30 px-2 py-1 md:px-3 md:py-2 rounded-xl shadow-lg">Intelligent Solutions</span> Through Advanced Analytics.
-            </p>
-            <p className="text-xs sm:text-sm md:text-xl lg:text-2xl text-gray-600 dark:text-gray-300 font-medium leading-tight md:leading-relaxed">
-              Data Scientist & ML Engineer specializing in <span className="text-primary dark:text-teal-400 font-bold">predictive modeling</span> and <span className="text-primary dark:text-teal-400 font-bold">real-time analytics</span> for data-driven insights.
-            </p>
-          </div>
 
-          {/* Action Buttons */}
-          <div className="flex flex-col sm:flex-row gap-2 sm:gap-6 justify-center items-center pt-2 md:pt-8">
-            <Button 
-              size="lg" 
-              className="bg-gradient-to-r from-primary via-blue-600 to-teal-500 hover:from-primary/90 hover:via-blue-700 hover:to-teal-600 dark:from-teal-500 dark:via-cyan-500 dark:to-purple-500 dark:hover:from-teal-400 dark:hover:via-cyan-400 dark:hover:to-purple-400 text-white px-4 sm:px-10 py-2 sm:py-4 text-sm sm:text-xl font-bold shadow-2xl hover:shadow-3xl transform hover:scale-105 transition-all duration-300"
-              onClick={() => window.open('https://drive.google.com/file/d/1TY1P2KRq9bAKLD9-B520JdQWVqBxDkj5/view?usp=drive_link', '_blank')}
-            >
-              <Download className="mr-2 sm:mr-3 h-4 w-4 sm:h-6 sm:w-6" />
-              Download Resume
-            </Button>
-            <Button 
-              size="lg" 
-              variant="outline" 
-              onClick={scrollToProjects}
-              className="border-2 border-primary dark:border-teal-400 text-primary dark:text-teal-400 hover:bg-primary/20 dark:hover:bg-teal-400/30 px-4 sm:px-10 py-2 sm:py-4 text-sm sm:text-xl font-bold shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 backdrop-blur-sm bg-white/10 dark:bg-gray-900/20"
-            >
-              See Projects
-            </Button>
-            <Button 
-              size="lg" 
-              variant="ghost" 
-              onClick={scrollToContact}
-              className="text-gray-700 dark:text-gray-200 hover:text-primary dark:hover:text-teal-400 px-4 sm:px-10 py-2 sm:py-4 text-sm sm:text-xl font-bold hover:bg-gray-100/50 dark:hover:bg-gray-800/50 transform hover:scale-105 transition-all duration-300 backdrop-blur-sm"
-            >
-              Let's Connect
-            </Button>
-          </div>
+          {/* Action Buttons and Social Links */}
+          <div className="mt-8 md:mt-12 space-y-6 md:space-y-8">
 
-          {/* Social Links */}
-          <div className="flex justify-center items-center space-x-4 sm:space-x-8 pt-2 md:pt-8">
-            <Button 
-              variant="ghost" 
-              size="icon" 
-              onClick={() => window.open('https://github.com/Parthchavann', '_blank')}
-              className="hover:text-primary dark:hover:text-teal-400 text-gray-600 dark:text-gray-300 hover:bg-primary/20 dark:hover:bg-teal-400/30 w-10 h-10 sm:w-16 sm:h-16 rounded-full shadow-xl hover:shadow-2xl transform hover:scale-110 transition-all duration-300 backdrop-blur-sm bg-white/10 dark:bg-gray-900/20"
-            >
-              <Github className="h-5 w-5 sm:h-8 sm:w-8" />
-            </Button>
-            <Button 
-              variant="ghost" 
-              size="icon" 
-              onClick={() => window.open('mailto:parthchavann05@gmail.com', '_blank')}
-              className="hover:text-primary dark:hover:text-teal-400 text-gray-600 dark:text-gray-300 hover:bg-primary/20 dark:hover:bg-teal-400/30 w-10 h-10 sm:w-16 sm:h-16 rounded-full shadow-xl hover:shadow-2xl transform hover:scale-110 transition-all duration-300 backdrop-blur-sm bg-white/10 dark:bg-gray-900/20"
-            >
-              <Mail className="h-5 w-5 sm:h-8 sm:w-8" />
-            </Button>
+            {/* Action Buttons */}
+            <div className="flex flex-col sm:flex-row gap-2 sm:gap-6 justify-center items-center">
+              <Button 
+                size="lg" 
+                className="bg-gradient-to-r from-primary via-blue-600 to-teal-500 hover:from-primary/90 hover:via-blue-700 hover:to-teal-600 dark:from-teal-500 dark:via-cyan-500 dark:to-purple-500 dark:hover:from-teal-400 dark:hover:via-cyan-400 dark:hover:to-purple-400 text-white px-4 sm:px-10 py-2 sm:py-4 text-sm sm:text-xl font-bold shadow-2xl hover:shadow-3xl transform hover:scale-105 transition-all duration-300"
+                onClick={() => window.open('https://drive.google.com/file/d/1TY1P2KRq9bAKLD9-B520JdQWVqBxDkj5/view?usp=drive_link', '_blank')}
+              >
+                <Download className="mr-2 sm:mr-3 h-4 w-4 sm:h-6 sm:w-6" />
+                Download Resume
+              </Button>
+              <Button 
+                size="lg" 
+                variant="outline" 
+                onClick={scrollToProjects}
+                className="border-2 border-primary dark:border-teal-400 text-primary dark:text-teal-400 hover:bg-primary/20 dark:hover:bg-teal-400/30 px-4 sm:px-10 py-2 sm:py-4 text-sm sm:text-xl font-bold shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 backdrop-blur-sm bg-white/10 dark:bg-gray-900/20"
+              >
+                See Projects
+              </Button>
+              <Button 
+                size="lg" 
+                variant="ghost" 
+                onClick={scrollToContact}
+                className="text-gray-700 dark:text-gray-200 hover:text-primary dark:hover:text-teal-400 px-4 sm:px-10 py-2 sm:py-4 text-sm sm:text-xl font-bold hover:bg-gray-100/50 dark:hover:bg-gray-800/50 transform hover:scale-105 transition-all duration-300 backdrop-blur-sm"
+              >
+                Let's Connect
+              </Button>
+            </div>
+
+            {/* Social Links */}
+            <div className="flex justify-center items-center space-x-4 sm:space-x-8">
+              <Button 
+                variant="ghost" 
+                size="icon" 
+                onClick={() => window.open('https://github.com/Parthchavann', '_blank')}
+                className="hover:text-primary dark:hover:text-teal-400 text-gray-600 dark:text-gray-300 hover:bg-primary/20 dark:hover:bg-teal-400/30 w-12 h-12 sm:w-18 sm:h-18 md:w-20 md:h-20 rounded-full shadow-xl hover:shadow-2xl transform hover:scale-110 transition-all duration-300 backdrop-blur-sm bg-white/10 dark:bg-gray-900/20"
+              >
+                <Github className="h-6 w-6 sm:h-9 sm:w-9 md:h-10 md:w-10" />
+              </Button>
+              <Button 
+                variant="ghost" 
+                size="icon" 
+                onClick={() => window.open('mailto:parthchavann05@gmail.com', '_blank')}
+                className="hover:text-primary dark:hover:text-teal-400 text-gray-600 dark:text-gray-300 hover:bg-primary/20 dark:hover:bg-teal-400/30 w-12 h-12 sm:w-18 sm:h-18 md:w-20 md:h-20 rounded-full shadow-xl hover:shadow-2xl transform hover:scale-110 transition-all duration-300 backdrop-blur-sm bg-white/10 dark:bg-gray-900/20"
+              >
+                <Mail className="h-6 w-6 sm:h-9 sm:w-9 md:h-10 md:w-10" />
+              </Button>
+            </div>
           </div>
         </div>
 
