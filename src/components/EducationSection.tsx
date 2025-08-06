@@ -46,7 +46,7 @@ export function EducationSection() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-10 max-w-7xl mx-auto">
           {education.map((edu, index) => (
             <Card
               key={edu.institution}
@@ -56,9 +56,9 @@ export function EducationSection() {
                 animationFillMode: 'forwards'
               }}
             >
-              <CardHeader className="pb-6">
-                <div className="flex items-start justify-between mb-6">
-                  <div className="flex-shrink-0 w-20 h-20 bg-white dark:bg-gray-100 border-2 border-border/30 rounded-xl p-3 group-hover:scale-105 transition-transform duration-300 shadow-lg hover:shadow-xl">
+              <CardHeader className="pb-8 px-8 pt-8">
+                <div className="flex items-start justify-between mb-8">
+                  <div className="flex-shrink-0 w-24 h-24 bg-white dark:bg-gray-100 border-2 border-border/30 rounded-xl p-3 group-hover:scale-105 transition-transform duration-300 shadow-lg hover:shadow-xl">
                     <img 
                       src={edu.logoSrc}
                       alt={edu.logoAlt}
@@ -70,38 +70,38 @@ export function EducationSection() {
                   </div>
                   <Badge 
                     variant={edu.status === "In Progress" ? "default" : "secondary"}
-                    className={`${edu.status === "In Progress" ? "bg-primary/20 text-primary border-primary/40 dark:bg-teal-400/20 dark:text-teal-400 dark:border-teal-400/40" : ""}`}
+                    className={`${edu.status === "In Progress" ? "bg-primary/20 text-primary border-primary/40 dark:bg-teal-400/20 dark:text-teal-400 dark:border-teal-400/40" : ""} px-3 py-1`}
                   >
                     {edu.status}
                   </Badge>
                 </div>
                 
-                <CardTitle className={`text-xl font-bold transition-colors ${edu.hoverColor} mb-4 leading-tight`}>
+                <CardTitle className={`text-2xl font-bold transition-colors ${edu.hoverColor} mb-6 leading-tight`}>
                   {edu.degree}
                 </CardTitle>
                 
-                <div className="space-y-3">
+                <div className="space-y-4">
                   <div className="flex items-center gap-3 text-muted-foreground">
-                    <BookOpen className="h-4 w-4 flex-shrink-0" />
-                    <span className="font-medium text-sm">{edu.institution}</span>
+                    <BookOpen className="h-5 w-5 flex-shrink-0" />
+                    <span className="font-medium">{edu.institution}</span>
                   </div>
-                  <div className="flex items-center gap-3 text-sm text-muted-foreground">
-                    <MapPin className="h-4 w-4 flex-shrink-0" />
+                  <div className="flex items-center gap-3 text-muted-foreground">
+                    <MapPin className="h-5 w-5 flex-shrink-0" />
                     <span>{edu.location}</span>
                   </div>
-                  <div className="flex items-center gap-3 text-sm text-muted-foreground">
-                    <Calendar className="h-4 w-4 flex-shrink-0" />
+                  <div className="flex items-center gap-3 text-muted-foreground">
+                    <Calendar className="h-5 w-5 flex-shrink-0" />
                     <span>{edu.duration}</span>
                   </div>
                 </div>
               </CardHeader>
               
-              <CardContent className="pt-0">
+              <CardContent className="pt-0 px-8 pb-8">
                 <div>
-                  <h4 className="font-semibold mb-4 text-sm text-muted-foreground uppercase tracking-wide">Relevant Coursework</h4>
-                  <div className="grid grid-cols-2 gap-2">
+                  <h4 className="font-semibold mb-5 text-sm text-muted-foreground uppercase tracking-wide">Relevant Coursework</h4>
+                  <div className="grid grid-cols-2 gap-3">
                     {edu.coursework.map((course) => (
-                      <Badge key={course} variant="outline" className="text-xs justify-center py-1 hover:bg-primary/10 hover:border-primary/30 transition-colors">
+                      <Badge key={course} variant="outline" className="text-xs justify-center py-2 px-3 hover:bg-primary/10 hover:border-primary/30 transition-colors">
                         {course}
                       </Badge>
                     ))}
