@@ -1,6 +1,6 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { GraduationCap, Calendar, MapPin, BookOpen } from "lucide-react";
+import { Calendar, MapPin, BookOpen } from "lucide-react";
 
 const education = [
   {
@@ -12,8 +12,8 @@ const education = [
     coursework: ["Data Structures", "Database Management Systems", "Data Mining", "Machine Learning"],
     gradient: "from-red-600 to-gray-600 dark:from-red-400 dark:to-gray-400",
     hoverColor: "group-hover:text-red-600 dark:group-hover:text-red-400",
-    iconBg: "bg-red-100 dark:bg-red-900/20",
-    iconColor: "text-red-600 dark:text-red-400"
+    logoSrc: "https://www.stonybrook.edu/brand/img/logos/mark/sbu-logo-vertical-500.png",
+    logoAlt: "Stony Brook University Logo"
   },
   {
     degree: "Bachelor of Technology in Artificial Intelligence & Data Science",
@@ -25,19 +25,19 @@ const education = [
     coursework: ["Data Structures", "Database Management Systems", "Data Mining", "Machine Learning"],
     gradient: "from-blue-600 to-indigo-600 dark:from-blue-400 dark:to-indigo-400",
     hoverColor: "group-hover:text-blue-600 dark:group-hover:text-blue-400",
-    iconBg: "bg-blue-100 dark:bg-blue-900/20",
-    iconColor: "text-blue-600 dark:text-blue-400"
+    logoSrc: "https://upload.wikimedia.org/wikipedia/en/thumb/c/c4/University_of_Mumbai_Logo.svg/1200px-University_of_Mumbai_Logo.svg.png",
+    logoAlt: "University of Mumbai Logo"
   }
 ];
 
 export function EducationSection() {
   return (
-    <section id="education" className="py-20 bg-gradient-to-br from-muted/30 via-background to-muted/30 dark:from-muted/20 dark:via-background dark:to-muted/20 relative overflow-hidden">
-      {/* Background decorative elements */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_40%,rgba(120,119,198,0.05),transparent_50%)] dark:bg-[radial-gradient(circle_at_30%_40%,rgba(147,197,253,0.08),transparent_50%)] pointer-events-none -z-10" />
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(34,197,94,0.05),transparent_50%)] dark:bg-[radial-gradient(circle_at_70%_80%,rgba(168,85,247,0.08),transparent_50%)] pointer-events-none -z-10" />
+    <section id="education" className="py-20 bg-muted/30 dark:bg-muted/20 relative overflow-hidden">
+      {/* Background decorative elements - matching other sections */}
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_60%_40%,rgba(120,119,198,0.05),transparent_50%)] dark:bg-[radial-gradient(circle_at_60%_40%,rgba(147,197,253,0.08),transparent_50%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(34,197,94,0.05),transparent_50%)] dark:bg-[radial-gradient(circle_at_20%_80%,rgba(168,85,247,0.08),transparent_50%)]" />
       
-      <div className="container mx-auto px-4 relative z-10">
+      <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-primary via-teal-500 to-purple-600 bg-clip-text text-transparent">
             Academic Foundation
@@ -47,59 +47,64 @@ export function EducationSection() {
           </p>
         </div>
 
-        <div className="max-w-4xl mx-auto space-y-8">
+        <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
           {education.map((edu, index) => (
             <Card
               key={edu.institution}
-              className="group hover:shadow-2xl transition-all duration-500 hover:scale-[1.02] bg-background/80 backdrop-blur-sm border-border hover:border-primary/30 dark:hover:border-teal-400/60 shadow-lg hover:shadow-primary/20 dark:hover:shadow-teal-400/25 animate-fade-in"
+              className="group cursor-pointer transition-all duration-500 hover:scale-[1.02] hover:shadow-2xl hover:-translate-y-2 bg-background/90 dark:bg-background/95 backdrop-blur-md border-border/60 dark:border-border/80 hover:border-primary/50 dark:hover:border-teal-400/60 shadow-lg shadow-primary/5 dark:shadow-teal-400/10 hover:shadow-primary/30 dark:hover:shadow-teal-400/35 animate-fade-in opacity-0"
               style={{ 
-                animationDelay: `${index * 200}ms`,
+                animationDelay: `${index * 150}ms`,
                 animationFillMode: 'forwards'
               }}
             >
-              <CardHeader>
-                <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4">
-                  <div className="flex items-start gap-4">
-                    <div className={`flex-shrink-0 w-12 h-12 rounded-full ${edu.iconBg} flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
-                      <GraduationCap className={`h-6 w-6 ${edu.iconColor}`} />
-                    </div>
-                    <div className="flex-grow">
-                      <CardTitle className={`text-xl md:text-2xl transition-all duration-300 ${edu.hoverColor} mb-2`}>
-                        {edu.degree}
-                      </CardTitle>
-                      <div className="space-y-1">
-                        <div className="flex items-center gap-2 text-muted-foreground">
-                          <BookOpen className="h-4 w-4 flex-shrink-0" />
-                          <span className="font-medium">{edu.institution}</span>
-                        </div>
-                        {edu.universitySystem && (
-                          <div className="flex items-center gap-2 text-sm text-muted-foreground ml-6">
-                            <span>({edu.universitySystem})</span>
-                          </div>
-                        )}
-                        <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                          <MapPin className="h-4 w-4 flex-shrink-0" />
-                          <span>{edu.location}</span>
-                        </div>
-                        <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                          <Calendar className="h-4 w-4 flex-shrink-0" />
-                          <span>{edu.duration}</span>
-                        </div>
-                      </div>
-                    </div>
+              <CardHeader className="pb-4">
+                <div className="flex items-center gap-4 mb-4">
+                  <div className="flex-shrink-0 w-14 h-14 bg-background border border-border rounded-lg p-2 group-hover:scale-105 transition-transform duration-300 shadow-md">
+                    <img 
+                      src={edu.logoSrc}
+                      alt={edu.logoAlt}
+                      className="w-full h-full object-contain"
+                      onError={(e) => {
+                        e.currentTarget.style.display = 'none';
+                      }}
+                    />
                   </div>
                   <Badge 
                     variant={edu.status === "In Progress" ? "default" : "secondary"}
-                    className={`${edu.status === "In Progress" ? "bg-primary/20 text-primary border-primary/40 dark:bg-teal-400/20 dark:text-teal-400 dark:border-teal-400/40" : ""} whitespace-nowrap`}
+                    className={`${edu.status === "In Progress" ? "bg-primary/20 text-primary border-primary/40 dark:bg-teal-400/20 dark:text-teal-400 dark:border-teal-400/40" : ""} ml-auto`}
                   >
                     {edu.status}
                   </Badge>
+                </div>
+                
+                <CardTitle className={`text-xl font-bold transition-colors ${edu.hoverColor} mb-2`}>
+                  {edu.degree}
+                </CardTitle>
+                
+                <div className="space-y-2">
+                  <div className="flex items-center gap-2 text-muted-foreground">
+                    <BookOpen className="h-4 w-4 flex-shrink-0" />
+                    <span className="font-medium text-sm">{edu.institution}</span>
+                  </div>
+                  {edu.universitySystem && (
+                    <div className="text-sm text-muted-foreground ml-6">
+                      {edu.universitySystem}
+                    </div>
+                  )}
+                  <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                    <MapPin className="h-4 w-4 flex-shrink-0" />
+                    <span>{edu.location}</span>
+                  </div>
+                  <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                    <Calendar className="h-4 w-4 flex-shrink-0" />
+                    <span>{edu.duration}</span>
+                  </div>
                 </div>
               </CardHeader>
               
               <CardContent>
                 <div>
-                  <h4 className="font-semibold mb-3 text-muted-foreground">Relevant Coursework</h4>
+                  <h4 className="font-semibold mb-3 text-sm text-muted-foreground">Relevant Coursework</h4>
                   <div className="flex flex-wrap gap-2">
                     {edu.coursework.map((course) => (
                       <Badge key={course} variant="outline" className="text-xs">
