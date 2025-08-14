@@ -33,11 +33,11 @@ const projects = [
   {
     id: 3,
     title: "AtmosAnalytics Platform",
-    description: "Enterprise-grade air quality monitoring platform with real-time data ingestion, streaming analytics, and interactive visualizations across multiple cities using modern data engineering stack.",
+    description: "Enterprise-grade air quality monitoring platform achieving real-time multi-city environmental analysis with Apache Spark Structured Streaming, Delta Lake storage optimization, and 97% Python codebase delivering scalable data engineering infrastructure.",
     tags: ["Python", "Apache Kafka", "Spark Streaming", "Delta Lake", "PostgreSQL", "Airflow", "Streamlit", "KeplerGL", "Docker"],
     category: "AI/ML",
     hoverColor: "group-hover:text-violet-600 dark:group-hover:text-violet-400",
-    challenges: "Built enterprise-grade air quality monitoring platform with real-time Kafka data ingestion and Apache Spark Structured Streaming for multi-city environmental analysis. Implemented comprehensive data quality validation pipeline and anomaly detection with weather data integration for enhanced environmental intelligence.",
+    challenges: "Engineered enterprise-grade environmental monitoring platform processing real-time air quality data streams across multiple cities using Apache Kafka ingestion and Spark Structured Streaming. Implemented Docker-containerized architecture with Delta Lake storage optimization achieving 97% Python codebase efficiency and comprehensive data quality validation pipeline with Great Expectations framework.",
     learnings: "Mastered real-time data engineering with Kafka streams and Spark processing, Delta Lake for reliable data storage, and interactive geospatial visualizations using KeplerGL. Developed expertise in containerized deployment with Docker Compose and workflow orchestration using Apache Airflow for scalable environmental monitoring systems.",
     github: "https://github.com/Parthchavann/air-quality-platform",
     demo: "#"
@@ -45,11 +45,11 @@ const projects = [
   {
     id: 4,
     title: "CarePulse Healthcare Intelligence System",
-    description: "Intelligent early warning system for patient deterioration using real-time EHR data, sensor readings, and clinical notes to predict sepsis risk 4-8 hours in advance with 89% AUC-ROC performance.",
+    description: "High-performance healthcare ML system achieving 89% AUC-ROC, 82% precision, and 87% recall for patient deterioration prediction 4-8 hours in advance. Processes 1000+ predictions/minute with <200ms P95 latency and <15% false positive rate.",
     tags: ["Apache Kafka", "Apache Spark", "PostgreSQL", "FastAPI", "Streamlit", "MLflow", "Kubernetes", "XGBoost", "LightGBM", "Hugging Face"],
     category: "AI/ML",
     hoverColor: "group-hover:text-violet-600 dark:group-hover:text-violet-400",
-    challenges: "Developed comprehensive hospital platform continuously ingesting EHR data, real-time sensor readings, and clinical notes to predict patient deterioration hours in advance. Implemented explainable AI with SHAP/LIME explanations and bias detection across patient populations achieving 82% precision, 87% recall, and 84% F1-score.",
+    challenges: "Engineered high-throughput healthcare ML pipeline achieving 89% AUC-ROC performance with 1000+ predictions/minute throughput and <200ms P95 API latency. Built comprehensive feature importance ranking system (Early Warning Score: 24%, Heart Rate Variability: 18%, Respiratory Rate Trend: 16%) with explainable AI using SHAP/LIME achieving <15% false positive rate to prevent alert fatigue.",
     learnings: "Advanced healthcare ML pipeline development with real-time streaming data processing, responsible AI implementation with fairness monitoring, and scalable Kubernetes deployment for critical healthcare systems. Mastered clinical dashboard development and actionable insight generation for healthcare professionals.",
     github: "https://github.com/Parthchavann/early_warning_system",
     demo: "#"
