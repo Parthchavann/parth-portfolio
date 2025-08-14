@@ -20,7 +20,7 @@ const projects = [
   },
   {
     id: 2,
-    title: "NEXUS: Real-Time Multimodal Disaster Intelligence System",
+    title: "RescueScope AI Disaster Intelligence Platform",
     description: "Enterprise-grade disaster intelligence platform with real-time 4-stream Kafka architecture and multimodal ML pipeline featuring 768-dim DistilBERT and 2048-dim ResNet-50 processing with sub-second inference and geospatial search capabilities.",
     tags: ["Kafka Streams", "Spark Streaming", "Kubernetes", "DistilBERT", "ResNet-50", "FastAPI", "Qdrant", "Redis", "WebSockets"],
     category: "AI/ML",
@@ -32,6 +32,30 @@ const projects = [
   },
   {
     id: 3,
+    title: "AtmosAnalytics Platform",
+    description: "Enterprise-grade air quality monitoring platform with real-time data ingestion, streaming analytics, and interactive visualizations across multiple cities using modern data engineering stack.",
+    tags: ["Python", "Apache Kafka", "Spark Streaming", "Delta Lake", "PostgreSQL", "Airflow", "Streamlit", "KeplerGL", "Docker"],
+    category: "AI/ML",
+    hoverColor: "group-hover:text-violet-600 dark:group-hover:text-violet-400",
+    challenges: "Built enterprise-grade air quality monitoring platform with real-time Kafka data ingestion and Apache Spark Structured Streaming for multi-city environmental analysis. Implemented comprehensive data quality validation pipeline and anomaly detection with weather data integration for enhanced environmental intelligence.",
+    learnings: "Mastered real-time data engineering with Kafka streams and Spark processing, Delta Lake for reliable data storage, and interactive geospatial visualizations using KeplerGL. Developed expertise in containerized deployment with Docker Compose and workflow orchestration using Apache Airflow for scalable environmental monitoring systems.",
+    github: "https://github.com/Parthchavann/air-quality-platform",
+    demo: "#"
+  },
+  {
+    id: 4,
+    title: "CarePulse Healthcare Intelligence System",
+    description: "Intelligent early warning system for patient deterioration using real-time EHR data, sensor readings, and clinical notes to predict sepsis risk 4-8 hours in advance with 89% AUC-ROC performance.",
+    tags: ["Apache Kafka", "Apache Spark", "PostgreSQL", "FastAPI", "Streamlit", "MLflow", "Kubernetes", "XGBoost", "LightGBM", "Hugging Face"],
+    category: "AI/ML",
+    hoverColor: "group-hover:text-violet-600 dark:group-hover:text-violet-400",
+    challenges: "Developed comprehensive hospital platform continuously ingesting EHR data, real-time sensor readings, and clinical notes to predict patient deterioration hours in advance. Implemented explainable AI with SHAP/LIME explanations and bias detection across patient populations achieving 82% precision, 87% recall, and 84% F1-score.",
+    learnings: "Advanced healthcare ML pipeline development with real-time streaming data processing, responsible AI implementation with fairness monitoring, and scalable Kubernetes deployment for critical healthcare systems. Mastered clinical dashboard development and actionable insight generation for healthcare professionals.",
+    github: "https://github.com/Parthchavann/early_warning_system",
+    demo: "#"
+  },
+  {
+    id: 5,
     title: "AI-Native Field Service Management Platform",
     description: "Full-stack FSM platform with AI-powered automation, real-time quoting, smart scheduling, and CRM integration for service businesses.",
     tags: ["React", "Next.js", "Convex", "TypeScript", "Claude Opus", "OpenAI o3", "CRM"],
