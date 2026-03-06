@@ -46,9 +46,9 @@ const experiences = [
     hoverColor: "group-hover:text-purple-600 dark:group-hover:text-purple-400"
   },
   {
-    role: "Data Analyst Intern",
+    role: "Data Engineering Intern",
     company: "Moneysoft Computers",
-    duration: "June 2023 – August 2023",
+    duration: "April 2023 – September 2023",
     location: "Hybrid",
     highlights: [
       "Designed interactive Power BI dashboards reducing manual reporting time by 25% with advanced KPI tracking",
