@@ -106,7 +106,7 @@ export function HeroSection() {
               <Button 
                 size="lg" 
                 className="bg-gradient-to-r from-primary via-blue-600 to-teal-500 hover:from-primary/90 hover:via-blue-700 hover:to-teal-600 dark:from-teal-500 dark:via-cyan-500 dark:to-purple-500 dark:hover:from-teal-400 dark:hover:via-cyan-400 dark:hover:to-purple-400 text-white px-4 sm:px-10 py-2 sm:py-4 text-sm sm:text-xl font-bold shadow-2xl hover:shadow-3xl transform hover:scale-105 transition-all duration-300"
-                onClick={() => window.open('https://drive.google.com/file/d/1TY1P2KRq9bAKLD9-B520JdQWVqBxDkj5/view?usp=drive_link', '_blank')}
+                onClick={() => window.open('https://drive.google.com/file/d/1ykVnAsgUCWCOE7pT-2MTmMouXv070kAQ/view?usp=drive_link', '_blank')}
               >
                 <Download className="mr-2 sm:mr-3 h-4 w-4 sm:h-6 sm:w-6" />
                 Download Resume
