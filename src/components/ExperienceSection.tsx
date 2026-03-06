@@ -6,7 +6,7 @@ const experiences = [
   {
     role: "AI Software Engineer Intern",
     company: "Hausvac",
-    duration: "July 2025 - Present",
+    duration: "July 2025 - August 2025",
     location: "Southampton, New York",
     highlights: [
       "Reduced invoice processing time from 14 days to 48 hours for 250+ monthly invoices measured by payment cycle analytics, by building automated job-to-invoice generation pipeline with Convex mutations handling $3.5M annual revenue",
